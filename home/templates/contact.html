@@ -1,0 +1,48 @@
+{% extends "./base.html" %}
+
+{% block css %}
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style/contactus.css' %}">
+{% endblock %}
+{% block start %}
+<div id="main">
+    <div class="container">
+        <form id="form" method="post" action='{% url "contact" %}'>
+        {% csrf_token %}
+            <h1 id="CM">Contact Me</h1>
+            
+            {% for message in messages  %}  
+            <div id="center">              
+            <div class="alert alert-{{color}} alert-dismissible fade show" id="msg" role="alert">
+                <strong>Message: </strong> {{message}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            </div>
+            {% endfor %}
+            <div class="each">
+                <label for="name">Name:</label><br>
+                <input required type="text" name="data[name]" id="name" placeholder="Name">
+            </div>
+            <div class="each">
+                <label for="email">Email:</label> <br>
+                <input required type="email" name="data[mail]" id="email" placeholder="abc@gmail.com">
+            </div>
+            <div class="each">
+                <label for="number">Contact Number:</label> <br>
+                <input required type="number" name="data[Contact Number]" id="number" placeholder="+911234567890">
+            </div>
+            <div class="each">
+                <label for="comment">Comment:</label> <br>
+                <textarea required name="data[comment]" id="comment" placeholder="Comment Here..."></textarea>
+            </div>
+            <div id="msg"></div>
+            <div class="each">
+                <button id="btn" onclick="PostData();">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

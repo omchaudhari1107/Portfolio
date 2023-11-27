@@ -1,0 +1,39 @@
+{% extends "./base.html" %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style/project.css' %}">
+{% endblock %}
+{% block start %}
+<div id="container">
+  <div class="card" onclick = "Show('contenthr')">
+        <img src="../static/img/IMG_20231116_124231.jpg" alt="Avatar" style="width:100%">
+        <div class="container">
+        <h4><b>Vocab Generator</b></h4>
+        </div>
+  </div>
+    <div class="card" onclick = "Show('contentvocab')">
+        <img src="../static/img/00-hand-gesture-recognition.gif" alt="Avatar" style="width:100%">
+        <div class="container">
+        <h4><b>Hand Gesture recognitionognition</b></h4>
+        </div>
+  </div>
+</div>
+<div id='content_main'>
+    <div id="contenthr" class="content"> 
+    Hand gesture recognition is a technology that enables a computer to interpret and understand gestures made by a person using their hands. It plays a crucial role in enhancing human-computer interaction, particularly in scenarios where physical touch or traditional input methods may be impractical or cumbersome. The process typically begins with capturing images or video feeds through cameras, followed by preprocessing to improve data quality. <br> <br>
+    The system then proceeds to identify and isolate hand regions within the captured data, a step known as hand detection. Subsequently, relevant features such as the positions of fingers, the orientation of the palm, and hand movements are extracted—a process referred to as feature extraction. These features serve as the basis for recognizing specific gestures. 
+    <br> <br>
+    👨‍💻 - <a href="https://github.com/omchaudhari1107/Hand-Gesture-Recog" target="_blank">Source Code</a>😉
+    </div> 
+    <div id="contentvocab" class="content"> 
+A vocabulary generator is a valuable tool designed to enhance language proficiency by providing users with a diverse range of words, along with their definitions and pronunciations. This tool typically features a comprehensive word database, allowing users to explore new terms and improve their understanding of the language. One of its key functions is the random generation of words, exposing users to a varied vocabulary. Additionally, contextual usage, often accompanied by example sentences, helps users grasp the practical application of each word.
+<br><br>
+Categorization of words based on difficulty, part of speech, or thematic relevance allows users to tailor their learning experience. Interactive elements like flashcards and quizzes further reinforce learning through repetition and self-assessment. Some advanced vocabulary generators employ adaptive learning algorithms to personalize the selection of words based on the user's proficiency level and learning history. Users can track their progress, identifying mastered words and areas that may require additional attention.
+    <br> <br>
+    👨‍💻 - <a href="https://github.com/omchaudhari1107/Daily-Vocab-Generator" target="_blank">Source Code</a>😉
+    </div>
+    
+<script src='{% static "js/project.js" %}'></script>
+</div>
+{% endblock %}
