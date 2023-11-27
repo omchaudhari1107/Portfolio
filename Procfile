@@ -1,1 +1,0 @@
-web gunicorn privateWeb.wsgi: --log-file -
