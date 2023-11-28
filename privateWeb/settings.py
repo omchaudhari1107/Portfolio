@@ -118,7 +118,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-STATIC_URL = "/static/"
+STATIC_URL = "/staticfiles/"
 STATICFILES_DIRS = [
     BASE_DIR / "static",
     "/var/www/static/",
