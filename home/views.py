@@ -32,7 +32,7 @@ def contact(request):
             context.update({"color": "danger"})
         # Read()
         subject = "About Connecting"
-        message = "I will contact you soon🥹,Follow me on\n\n\nGithub🥰 - https://github.com/omchaudhari1107\nLinkein😹 - https://www.linkedin.com/in/om-chaudhari-38960721b"
+        message = "I will contact you soon🥹,Follow me on\n\n\nGithub🥰 - https://github.com/omchaudhari1107\n\nLinkein😹 - https://www.linkedin.com/in/om-chaudhari-38960721b"
         sender = "omchaudhari1107@gmail.com"
         recipients = [mail]
 
@@ -45,9 +45,8 @@ def index(request):
     shlok = Random_shlok()
     shlok = shlok.split('split')
     num1 = shlok[len(shlok)-1].split(".")
-    context = {"page": "Home", "shlok":shlok,"num":shlok[len(shlok)-1],"num1":num1[len(num1)-1]}
+    context = {"page": "Home", "shlok":shlok,"num":shlok[len(shlok)-1],"num1":num1[len(num1)-1].replace(" ",""),"ch":num1[0].replace(" ","")}
     shlok.pop(len(shlok)-1)
-
     return render(request, "index.html", context)
 
 
