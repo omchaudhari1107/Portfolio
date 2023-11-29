@@ -18,9 +18,3 @@ function download() {
   a.click();
   document.body.removeChild(a);
 }
-
-const loaderContainer = document.getElementById('loader-wrapper');
-console.log(loaderContainer)
-window.addEventListener('load', () => {
-  loaderContainer.style.display = 'none';
-});
