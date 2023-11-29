@@ -10,7 +10,7 @@ var typed = new Typed('.multiple-filed', options);
 
 function download() {
   var filePath = "static/pdf/Om%20Chaudhari%20CV.pdf";
-  var fileName = "Om Chaudhari CV.pdf"; 
+  var fileName = "Om Chaudhari CV.pdf";
   var a = document.createElement('a');
   a.href = filePath;
   a.download = fileName;

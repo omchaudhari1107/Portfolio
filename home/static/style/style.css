@@ -53,12 +53,13 @@
 
 #bg {
 
-    background: rgb(255, 0, 232);
-    background: linear-gradient(144deg, rgba(255, 0, 232, 1) 0%, rgba(158, 0, 255, 1) 45%, rgba(0, 202, 255, 1) 100%);
+    /* background: rgb(255, 0, 232); */
+    background: linear-gradient(144deg, rgb(174, 0, 255) 0%, rgba(158, 0, 255, 1) 45%, rgba(0, 202, 255, 1) 100%);
+    /* background-color: white; */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }
 
 #cards {
