@@ -7,23 +7,56 @@
 #post>.multiple-filed {
     color: #00ffa3;
 }
-#shlok_num {
-    font-family: 'Oswald', sans-serif;
-    font-size:20px ;
-    text-align: end;
-    color: #fbff00;
-    padding-right:5%;
+
+/* ************************ */
+#spinner {
+
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
 }
 
-@keyframes texts{
+@keyframes spin {
+    0% { transform: rotate(0deg); 
+        border-top: 16px solid rgb(68, 0, 255);}
+    50% { transform: rotate(180deg); 
+            border-top: 16px solid rgb(0, 255, 85);}
+    100% { transform: rotate(360deg); 
+        border-top: 16px solid rgb(68, 0, 255);}
+}
+
+#loader-wrapper{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(144deg, rgb(174, 0, 255) 0%, rgba(158, 0, 255, 1) 45%, rgba(0, 202, 255, 1) 100%);
+    justify-content: center;
+    align-items: center;
+}
+
+/* ************************ */
+#shlok_num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    text-align: end;
+    color: #fbff00;
+    padding-right: 5%;
+}
+
+@keyframes texts {
     0% {
-        color:  rgb(0, 255, 98);
+        color: rgb(0, 255, 98);
     }
 
     100% {
-        color:  rgb(0, 174, 255);
+        color: rgb(0, 174, 255);
     }
-    }
+}
 
 .typed-cursor {
     color: #00ffa3;
@@ -188,11 +221,13 @@
 }
 
 #cards #person .bi-linkedin:hover {
-    fill: rgb(63, 63, 255);
+    transform: scale(1.3);
+    fill: rgb(96, 96, 255);
 }
 
 #cards #person .bi-github:hover {
-    fill: rgb(132, 0, 255);
+    transform: scale(1.3);
+    fill: rgb(168, 76, 255);
 }
 
 /* for detail */
@@ -203,13 +238,6 @@
     background-color: rgb(58, 57, 57);
     box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.4);
     border-radius: 20px;
-}
-
-#cards #detail #name {
-    display: block;
-    margin: auto;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
 }
 
 /* navigation bar */
@@ -250,11 +278,11 @@
     margin: 5% 20%;
 }
 
-#main-content #motive {
+#main-content #shlok {
     text-align: center;
     color: white;
     /* text-align: center; */
-    font-size:x-large;
+    font-size: x-large;
     font-family: 'Lobster', cursive;
     margin: 0px;
 }
@@ -311,7 +339,14 @@ Responsive content
 *
 *
 */
-
+@media only screen and (max-width:1150px){
+    #main-content #shlok{
+        font-size: large;
+    }
+    #main-content #shlok_num > a{
+        font-size: 10px;
+    }
+}
 @media only screen and (max-width:1084px) {
     * {
         margin: 0;
@@ -404,9 +439,11 @@ Responsive content
 }
 
 @media only screen and (max-width:630px) {
-    #main-content #motive {
-
-        font-size: large;
+    #main-content #shlok{
+        font-size: medium;
+    }
+    #main-content #shlok_num > a{
+        font-size: 10px;
     }
 
     #main-content>#me {
@@ -491,7 +528,14 @@ Responsive content
         width: 25px;
     }
 }
-
+@media only screen and (max-width:494px){
+    #main-content #shlok{
+        font-size: small;
+    }
+    #main-content #shlok_num > a{
+        font-size: 10px;
+    }
+}
 @media only screen and (max-width:471px) {
     #main-content #me {
         font-size: 25px;
@@ -508,7 +552,17 @@ Responsive content
         margin-top: 5px;
     }
 }
-
+@media only screen and (max-width:425px){
+    #main-content #shlok{
+        font-size: 10px;
+    }
+    #main-content #shlok_num {
+        font-size: 10px;
+    }
+    #shlok_num a {
+        font-size: 1px;
+    }
+}
 @media only screen and (max-width:420px) {
     .right-one #content #nav ul li {
         font-size: small;
@@ -554,3 +608,4 @@ Responsive content
         height: 20px;
     }
 }
+/* @media only screen and (max-width:375px) */

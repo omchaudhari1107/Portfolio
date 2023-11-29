@@ -1,12 +1,13 @@
 {% extends "./base.html" %}
 {% block start %}
 <div id="main-content">
-  <div id="motive">🙏" 
+  <div id="shlok">🙏"
     {% for i in shlok %}
     {{i}} <br>
     {% endfor %}
   </div>
-  <div id="shlok_num">🔗<a href="https://vedabase.io/en/library/bg/{{ch}}/{{num1}}" target="_blank">-Bhagvad Gita {{num}}</a></div>
+  <div id="shlok_num" class="shlok">🔗<a href="https://vedabase.io/en/library/bg/{{ch}}/{{num1}}"
+      target="_blank">-Bhagvad Gita {{num}}</a></div>
   <div id="me">😎Om Chaudhari(20)<div id="post">-I am a <span class="multiple-filed"></span></div>
   </div>
 </div>
@@ -14,41 +15,33 @@
   <div id="title">About</div>
   <div id="txt">
 
-    My name is Om Chaudhari, and I am a dedicated learner with a strong passion for programming and software
-    development. Currently pursuing my studies at LDRP-ITR, I have gained expertise in various programming
-    languages and technologies, including Java, DSA (Data Structures and Algorithms), C, C++, OOPs
-    (Object-Oriented Programming), Dart, Flutter, and Python. With a particular focus on full-stack
-    development, I constantly strive to expand my knowledge and skills in this rapidly evolving field. <br>
-    <br>
+    My name is Om Chaudhari, Embarking on a journey toward a Bachelor's degree in Information Technology at LDRP-ITR, my
+    academic odyssey is marked by a distinguished Current Cumulative Performance Index (CPI) of 8.5. My passion for the
+    dynamic realm of technology propels me beyond the confines of traditional coursework, driving me to explore and
+    master various programming languages and frameworks.✨ <br> <br>
 
-    Throughout my academic journey at LDRP-ITR, I have delved deep into the intricacies of programming and
-    computer science. Java, a versatile language renowned for its object-oriented approach, has enabled me to
-    develop robust and scalable applications. Additionally, my understanding of Data Structures and Algorithms
-    (DSA) has enhanced my problem-solving abilities, enabling me to develop efficient and optimized solutions.
-    I have also honed my skills in C, C++, and OOPs, allowing me to build software systems that are both
-    reliable and maintainable. <br><br>
+    Proficient in the foundational trio of HTML, CSS, and JS, I navigate the complexities of server-side scripting with
+    expertise in Node.js. My coding repertoire extends to encompassing languages like C, C++, Java, and Python, where I
+    apply Object-Oriented Programming (OOP) principles to create efficient and scalable solutions. Complementing this,
+    my grasp of Data Structures and Algorithms (DSA) enhances my problem-solving skills, enabling me to tackle intricate
+    challenges in the realm of IT.💫<br> <br>
 
-    In addition to my core knowledge, I have ventured into modern technologies to broaden my skill set. Dart
-    and Flutter, popular frameworks for mobile app development, have enabled me to create captivating and
-    feature-rich cross-platform applications. Furthermore, my proficiency in Python has facilitated my
-    exploration of the data science domain, where I employ powerful libraries and frameworks to extract
-    valuable insights from vast datasets. As a full-stack developer, I have gained expertise in front-end
-    technologies such as HTML, CSS, and JavaScript, alongside back-end frameworks like Node.js and Django,
-    allowing me to develop end-to-end web applications. <br><br>
+    In the vast landscape of web development, I wield the power of Django to craft robust and scalable applications.
+    Data manipulation becomes second nature with Pandas, as I extract valuable insights from datasets. Git serves as my
+    ally in version control, ensuring seamless collaboration on projects, while SQL and MongoDB are my tools for
+    efficient and structured database management.💥<br> <br>
 
-    My journey as a learner and developer goes beyond academic pursuits. I am driven by a deep passion for
-    programming and an insatiable curiosity for learning new technologies. I actively engage in personal
-    projects, participate in coding challenges, and contribute to open-source communities, all of which have
-    enhanced my skills and expanded my knowledge base. This commitment to continuous growth allows me to stay
-    up-to-date with the latest trends and advancements in the ever-evolving field of software development.
-    <br><br>
+    Responsive design is not just a concept but a practice in my projects, thanks to my adeptness with Bootstrap 5.
+    Beyond the technicalities, my love for learning drives me to continuously explore emerging technologies and
+    frameworks, ensuring my skill set remains at the forefront of industry trends.✌️<br> <br>
 
-    In conclusion, I am Om Chaudhari, a dedicated learner and full-stack developer with a broad skill set in
-    Java, DSA, C, C++, OOPs, Dart, Flutter, Python, and full-stack development. Through my academic journey at
-    LDRP-ITR and my passion for programming, I have acquired a strong foundation in computer science
-    principles and modern technologies. I am committed to furthering my knowledge and contributing to the
-    dynamic world of software development, where I can make a meaningful impact by creating innovative and
-    impactful solutions. <br><br>
+    The synthesis of my technical acumen, from OOP and DSA to Django, Pandas, and beyond, positions me as a dynamic
+    force in the evolving landscape of information technology. Armed with a holistic understanding and a relentless
+    commitment to growth, I am poised to make meaningful contributions to the innovative tapestry of the tech world,
+    where learning is not just a process but a lifelong pursuit.👊
   </div>
+</div>
+<div id="loader-wrapper">
+  <p id="spinner"></p>
 </div>
 {% endblock %}

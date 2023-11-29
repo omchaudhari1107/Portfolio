@@ -1,5 +1,5 @@
 var options = {
-  strings: ["Full-Stack Dev", "Intern", "Programmer👨‍💻", "Learner", "Django Dev❤️"],
+  strings: ["Full-Stack Dev", "Programmer 👨‍💻", "Django Dev❤️", "Learner 🔍"],
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,
@@ -18,3 +18,9 @@ function download() {
   a.click();
   document.body.removeChild(a);
 }
+
+const loaderContainer = document.getElementById('loader-wrapper');
+console.log(loaderContainer)
+window.addEventListener('load', () => {
+  loaderContainer.style.display = 'none';
+});

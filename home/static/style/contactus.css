@@ -103,7 +103,10 @@ textarea {
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         /* margin-bottom: 15px;  */
     }
-
+    input{
+        border: none;
+        outline: none;
+    }
     label {
         width: 90%;
         color: #fff;
