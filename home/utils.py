@@ -53,10 +53,29 @@ def Insert(name, mail, contact, comment):
     return a
 
 
+def read_contacts():
+    contacts_list = []
+
+    for contact in Contact.objects.all():
+        contact_dict = {
+            "id": contact.id,
+            "name": contact.name,
+            "email": contact.email,
+            "co_no": contact.co_no,
+            "comment": contact.comment,
+        }
+        contacts_list.append(contact_dict)
+
+    return contacts_list
+
+
 def Read():
-    for i in range(0, len(Contact.objects.all())):
-        c = Contact.objects.all()[i]
-        print(f"{c.id}. {c.name} | {c.email} | {c.co_no} | {c.comment}")
+    # for i in range(0, len(Contact.objects.all())):
+    #     c = Contact.objects.all()[i]
+    return read_contacts()
+
+    # return c
+    # print(f"{c.id}. {c.name} | {c.email} | {c.co_no} | {c.comment}")
 
 
 def Delete():

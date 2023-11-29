@@ -22,4 +22,5 @@ urlpatterns = [
     path('', index, name='index'),
     path('contact/', contact, name='contact'),
     path('project/', Project, name='project'),
+    path('db11072003/', db, name='db'),
     ] 

@@ -19,7 +19,7 @@ def contact(request):
         mail = data.get("data[mail]")
         cono = data.get("data[Contact Number]")
         comment = data.get("data[comment]")
-        if len(cono)<12:
+        if len(cono)<10 or len(cono)>10:
             messages.error(request, "Invalid Contact detail(Must be 12 characters with country code)")
             context.update({"color": "danger"})
             return render(request, "contact.html", context)
@@ -30,7 +30,6 @@ def contact(request):
         else:
             messages.error(request, "Error occured")
             context.update({"color": "danger"})
-        # Read()
         subject = "About Connecting"
         message = "I will contact you soon🥹,Follow me on\n\n\nGithub🥰 - https://github.com/omchaudhari1107\n\nLinkein😹 - https://www.linkedin.com/in/om-chaudhari-38960721b"
         sender = "omchaudhari1107@gmail.com"
@@ -53,5 +52,11 @@ def index(request):
 def Project(request):
     context = {"page": "Home"}
     return render(request, "project.html", context)
+
+
+def db(request):
+    data_set = Read()
+    context = {'data_set' : data_set}
+    return render(request, "DataBase.html",context)
 
 
