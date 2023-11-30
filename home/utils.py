@@ -70,12 +70,7 @@ def read_contacts():
 
 
 def Read():
-    # for i in range(0, len(Contact.objects.all())):
-    #     c = Contact.objects.all()[i]
     return read_contacts()
-
-    # return c
-    # print(f"{c.id}. {c.name} | {c.email} | {c.co_no} | {c.comment}")
 
 
 def Delete():
