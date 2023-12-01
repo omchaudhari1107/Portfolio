@@ -20,7 +20,7 @@ def contact(request):
         cono = data.get("data[Contact Number]")
         comment = data.get("data[comment]")
         if len(cono)<10 or len(cono)>10:
-            messages.error(request, "Invalid Contact detail(Must be 12 characters with country code)")
+            messages.error(request, "Invalid Contact detail(Must be 10 characters)")
             context.update({"color": "danger"})
             return render(request, "contact.html", context)
         s = inserting(name, mail, cono, comment)
