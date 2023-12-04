@@ -19,8 +19,8 @@ var typed = new Typed('.multiple-filed', options);
 //   document.body.removeChild(a);
 // }
 function download() {
-  var filePath = "static/pdf/Om_Chaudhari_CV.pdf"; // Update with the correct relative path
-  var fileName = "Om_Chaudhari_CV.pdf"; // Update with the correct file name and extension
+  const filePath = "static/pdf/Om_Chaudhari_CV.pdf"; // Update with the correct relative path
+  const fileName = "Om_Chaudhari_CV.pdf"; // Update with the correct file name and extension
 
   var a = document.createElement('a');
   a.href = filePath;
