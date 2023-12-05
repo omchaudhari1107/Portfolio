@@ -11,7 +11,7 @@ def inserting(name, mail, cono, comment):
 
 def contact(request):
     context = {
-        "page": "Home",
+        "page": "Om Chaudhari",
     }
     if request.method == "POST":
         data = request.POST
@@ -44,13 +44,13 @@ def index(request):
     shlok = Random_shlok()
     shlok = shlok.split('split')
     num1 = shlok[len(shlok)-1].split(".")
-    context = {"page": "Home", "shlok":shlok,"num":shlok[len(shlok)-1],"num1":num1[len(num1)-1].replace(" ",""),"ch":num1[0].replace(" ","")}
+    context = {"page": "Om Chaudhari", "shlok":shlok,"num":shlok[len(shlok)-1],"num1":num1[len(num1)-1].replace(" ",""),"ch":num1[0].replace(" ","")}
     shlok.pop(len(shlok)-1)
     return render(request, "index.html", context)
 
 
 def Project(request):
-    context = {"page": "Home"}
+    context = {"page": "Om Chaudhari"}
     return render(request, "project.html", context)
 
 
